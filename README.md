@@ -1,4 +1,4 @@
-# Manicure scheduling system
+# Restaurant Indicator
 
 **Número da Lista**: 5<br>
 **Conteúdo da Disciplina**: Dividir e Conquistar/ Contagem de Inversões <br>
