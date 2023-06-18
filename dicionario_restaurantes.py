@@ -41,18 +41,18 @@ restaurantes = {
             'link': 'https://www.facebook.com/lebirosque'
         }
     ],
-    'fastfood': [
+    'churrascaria': [
         {
-            'nome': 'McDonald\'s',
-            'link': 'https://www.mcdonalds.com.br/'
+            'nome': 'Potência do Sul',
+            'link': 'https://potenciadosul.com.br/'
         },
         {
-            'nome': 'Burger King',
-            'link': 'https://www.burgerking.com.br/'
+            'nome': 'Fogo de Chão Brasília',
+            'link': 'https://fogodechao.com.br/location/brasilia/'
         },
         {
-            'nome': 'Subway',
-            'link': 'https://www.subway.com.br/'
+            'nome': 'Sal e Brasa Brasília',
+            'link': 'https://salebrasa.com.br/'
         }
     ],
     'brasileira': [
