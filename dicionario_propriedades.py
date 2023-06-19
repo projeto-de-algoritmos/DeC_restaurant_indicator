@@ -15,18 +15,20 @@ caracteristicas = {
     'churrascaria': ['carne', 'pimenta', 'legumes', 'massas', 'arroz']
 }
 
+arrays_ingredientes = {}
 
-##Transformando o dicionario em array de id
-mexicana = [id for id in ingredientes if ingredientes[id] in caracteristicas['mexicana']]
-brasileira = [id for id in ingredientes if ingredientes[id] in caracteristicas['brasileira']]
-churrascaria = [id for id in ingredientes if ingredientes[id] in caracteristicas['churrascaria']]
-italiana = [id for id in ingredientes if ingredientes[id] in caracteristicas['italiana']]
-indiana = [id for id in ingredientes if ingredientes[id] in caracteristicas['indiana']]
-japonesa = [id for id in ingredientes if ingredientes[id] in caracteristicas['japonesa']]
+for restaurante, ingredientes_restaurante in caracteristicas.items():
+    array_indices = []
+    for ingrediente in ingredientes_restaurante:
+        for indice, nome_ingrediente in ingredientes.items():
+            if nome_ingrediente == ingrediente:
+                array_indices.append(indice)
+                break
+    arrays_ingredientes[restaurante] = array_indices
 
-# print('Array da culinária mexicana:', mexicana)
-# print('Array da culinária brasileira:', brasileira)
-# print('Array da culinária churrascaria:', churrascaria)
-# print('Array da culinária italiana:', italiana)
-# print('Array da culinária indiana:', indiana)
-# print('Array da culinária japonesa:', japonesa)
+print(arrays_ingredientes['mexicana'])  # Saída: [1, 2, 3, 4, 5]
+print(arrays_ingredientes['japonesa'])  # Saída: [5, 2, 3, 4, 1]
+print(arrays_ingredientes['italiana'])  # Saída: [4, 2, 3, 1, 5]
+print(arrays_ingredientes['indiana'])  # Saída: [4, 5, 2, 3, 1]
+print(arrays_ingredientes['brasileira'])  # Saída: [2, 3, 4, 1, 5]
+print(arrays_ingredientes['churrascaria'])  # Saída: [3, 1, 2, 4, 5]
