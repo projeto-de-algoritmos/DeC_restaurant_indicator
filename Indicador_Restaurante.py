@@ -98,7 +98,7 @@ input_entry = tk.Entry(window)
 input_entry.pack()
 
 # Botão para processar o vetor
-process_button = tk.Button(window, text="Processar", command=process_input)
+process_button = tk.Button(window, text="Indicar Restaurante", command=process_input)
 process_button.pack()
 
 # Executar a janela principal
