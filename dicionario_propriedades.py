@@ -1,17 +1,17 @@
 ingredientes = {
-    'A': 'pimenta',
-    'B': 'legumes',
-    'C': 'carne',
-    'D': 'massas',
-    'E': 'arroz'
+    '1': 'pimenta',
+    '2': 'legumes',
+    '3': 'carne',
+    '4': 'massas',
+    '5': 'arroz'
 }
 
 caracteristicas = {
     'mexicana': ['pimenta', 'legumes', 'carne', 'massas', 'arroz'],
     'japonesa': ['arroz', 'legumes', 'carne', 'massas', 'pimenta'],
     'italiana': ['massas', 'legumes', 'carne', 'pimenta', 'arroz'],
-    'indiana': ['massas', 'arroz', 'legumes', 'carne', 'pimenta'],
-    'brasileira': ['legumes', 'carne', 'massas', 'pimenta', 'arroz'],
+    'indiana': ['arroz', 'massa', 'legumes', 'carne', 'pimenta'],
+    'brasileira': ['legumes', 'carne', 'massas', 'arroz', 'pimenta'],
     'churrascaria': ['carne', 'pimenta', 'legumes', 'massas', 'arroz']
 }
 
@@ -26,9 +26,9 @@ for restaurante, ingredientes_restaurante in caracteristicas.items():
                 break
     arrays_ingredientes[restaurante] = array_indices
 
-print(arrays_ingredientes['mexicana'])  # Saída: ['A', 'B', 'C', 'D', 'E']
-print(arrays_ingredientes['japonesa'])  # Saída: ['E', 'B', 'C', 'D', 'A']
-print(arrays_ingredientes['italiana'])  # Saída: ['D', 'B', 'C', 'A', 'E']
-print(arrays_ingredientes['indiana'])  # Saída: ['D', 'E', 'B', 'C', 'A']
-print(arrays_ingredientes['brasileira'])  # Saída: ['B', 'C', 'D', 'A', 'E']
-print(arrays_ingredientes['churrascaria'])  # Saída: ['C', 'A', 'B', 'D', 'E']
+print(arrays_ingredientes['mexicana'])  # Saída: ['1', '2', '3', '4', '5']
+print(arrays_ingredientes['japonesa'])  # Saída: ['5', '2', '3', '4', '1']
+print(arrays_ingredientes['italiana'])  # Saída: ['4', '2', '3', '1', '5']
+print(arrays_ingredientes['indiana'])  # Saída: ['5', '4', '2', '3', '1']
+print(arrays_ingredientes['brasileira'])  # Saída: ['2', '3', '4', '5', '1']
+print(arrays_ingredientes['churrascaria'])  # Saída: ['3', '1', '2', '4', '5']
