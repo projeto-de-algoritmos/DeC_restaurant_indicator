@@ -42,40 +42,56 @@ def process_input():
         numbers = list(map(int, user_input.split()))
         sorted_numbers, inversions = merge_sort(numbers)
 
-        result_window = tk.Toplevel(window)
-        result_window.title("Resultado")
 
-        if inversions <= 2:
-            messagebox.showinfo("Recomendação", "Você tem uma ótima escolha!")
+        if inversions <= 1:
+            messagebox.showinfo("Recomendação - Restaurante Mexicano", "De acordo com suas preferencias o restaurante indicado a você e o Restaurante Mexicano!! \n\nAlgumas opções:\n\n"
+            + "nome: Si Senor\n link: https://www.sisenor.com.br/\n\n nome: El Paso Texas\n link: https://www.elpaso.com.br/\n\n nome: Hermanito\n link: https://www.instagram.com/hermanito_asanorte")
+        elif inversions <= 3:
+            messagebox.showinfo("Recomendação - Restaurante Churrascaria", "De acordo com suas preferencias o restaurante indicado a você e o Restaurante Churrascaria!! \n\nAlgumas opções:\n\n"
+            + "nome: Potência do Sul\n link: https://potenciadosul.com.br/\n\n nome: Fogo de Chão Brasília\n link: https://fogodechao.com.br/location/brasilia/\n\n nome: Sal e Brasa Brasília\n link: https://salebrasa.com.br/")
         elif inversions <= 5:
-            messagebox.showinfo("Recomendação", "Você tem uma boa escolha!")
+            messagebox.showinfo("Recomendação - Restaurante Brasileiro", "De acordo com suas preferencias o restaurante indicado a você e o Restaurante Brasileiro!! \n\nAlgumas opções:\n\n"
+            + "nome: Mangai\n link: https://mangai.com.br/\n\n nome: Tapera Brasileira Restaurante\n link: https://restaurantguru.com.br/Tapera-Brasileira-Brasilia\n\n nome: Fogão Mineiro\n link: https://www.fogaomineiro.com.br/")
+        elif inversions <= 7:
+            messagebox.showinfo("Recomendação - Restaurante Italiano", "De acordo com suas preferencias o restaurante indicado a você e o Restaurante Italiano!! \n\nAlgumas opções:\n\n"
+            + "nome: Papa Cucina\n link: https://www.instagram.com/papacucina_/\n\n nome: Villa Tevere\n link: https://www.villatevere.com.br/\n\n nome: A Mano\n link: https://www.instagram.com/amanorestaurante/" )
+        elif inversions <= 8:
+            messagebox.showinfo("Recomendação - Restaurante Japones", "De acordo com suas preferencias o restaurante indicado a você e o Restaurante Japones!!\n\nAlgumas opções:\n\n"
+            +"nome: Nippon\n link: https://nipponbrasilia.com.br/\n\n nome: Restaurante Kojima\n link: https://www.restaurantekojima.com.br/\n\n nome: Shoio Sushi Lounge\n link: https://www.shoiosushi.com/" )
         else:
-            messagebox.showinfo("Recomendação", "Você pode considerar outras opções.")
+            messagebox.showinfo("Recomendação - Restaurante Indiano", "De acordo com suas preferencias o restaurante indicado a você e o Restaurante Indiano!!\n\nAlgumas opções:\n\n"
+            + "nome: Indian House\n link: https://www.hubt.com.br/indian-house/\n\n nome: Namaste Restaurante\n link: https://www.ifood.com.br/delivery/brasilia-df/namaste-indian-restaurante-asa-norte/\n\n nome: Indian Lounge\n link: https://www.facebook.com/indianloungebsb/" )
     except ValueError:
         messagebox.showerror("Erro", "Insira números inteiros separados por espaço.")
 
 # Criar a janela principal
 window = tk.Tk()
-window.title("Contagem de Inversões")
+window.title("Indicador de restaurante")
 
 # Criar a tabela fixa
-table_label = tk.Label(window, text="Tabela de Avaliações")
+table_label = tk.Label(window, text="Tabela de Identificação")
 table_label.pack()
 
-table = ttk.Treeview(window, columns=("Numbers"))
-table.heading("#0", text="ID")
-table.heading("Numbers", text="Número")
+table = ttk.Treeview(window, columns=("Numbers"), height=7) 
+table.heading("#0", text="     ID ")
+table.heading("Numbers", text="    Ingrediente ")
+
+# Centralizar os valores
+table.column("#0", anchor="center")
+table.column("Numbers", anchor="center")
+
 table.pack()
 
 # Adicionar itens à tabela
-table.insert("", "end", text="1", values=(4,))
-table.insert("", "end", text="2", values=(2,))
-table.insert("", "end", text="3", values=(1,))
-table.insert("", "end", text="4", values=(3,))
-table.insert("", "end", text="5", values=(5,))
+table.insert("", "end", text="", values=("",))
+table.insert("", "end", text="1", values=("Pimenta",))
+table.insert("", "end", text="2", values=("Legumes",))
+table.insert("", "end", text="3", values=("Carne",))
+table.insert("", "end", text="4", values=("Massas",))
+table.insert("", "end", text="5", values=("Arroz",))
 
 # Criar o campo de entrada
-input_label = tk.Label(window, text="Insira um vetor de números inteiros separados por espaço:")
+input_label = tk.Label(window, text="Insira a ordem de IDs de acordo com sua \npreferência do que não pode faltar no seu prato: (separe por espaço)")
 input_label.pack()
 
 input_entry = tk.Entry(window)
