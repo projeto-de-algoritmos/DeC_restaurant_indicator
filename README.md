@@ -13,6 +13,9 @@
 O projeto de recomendação de restaurantes com base em preferências de ingredientes oferece aos usuários uma maneira prática e personalizada de descobrir opções gastronômicas em Brasília. Através de um algoritmo de contagem de inversões, as preferências de ingredientes dos usuários são comparadas com as características dos diferentes estilos de restaurantes, resultando em uma recomendação que se alinha com suas escolhas.
 
 ## Screenshots
+![image](https://github.com/projeto-de-algoritmos/DeC_restaurant_indicator/assets/67807684/305a6be0-2ba0-43fc-9bd4-c57aee43ca8c)
+![image](https://github.com/projeto-de-algoritmos/DeC_restaurant_indicator/assets/67807684/4a0fdb0a-beeb-494b-9d82-fea47036d3fb)
+
 
 
 ## Uso 
