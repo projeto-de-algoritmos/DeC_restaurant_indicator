@@ -27,20 +27,6 @@ restaurantes = {
             'link': 'https://www.shoiosushi.com/'
         }
     ],
-    'hipster': [
-        {
-            'nome': 'Resenha Bar e Restaurante',
-            'link': 'https://www.facebook.com/resenhabarerestaurante'
-        },
-        {
-            'nome': 'Green House',
-            'link': 'https://www.greenhouselago.com/'
-        },
-        {
-            'nome': 'Le Birosque',
-            'link': 'https://www.facebook.com/lebirosque'
-        }
-    ],
     'churrascaria': [
         {
             'nome': 'Potência do Sul',
