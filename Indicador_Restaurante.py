@@ -67,7 +67,7 @@ def process_input():
 
 # Criar a janela principal
 window = tk.Tk()
-window.title("Indicador de restaurante")
+window.title("Indicador de Restaurantes - BSB")
 
 # Criar a tabela fixa
 table_label = tk.Label(window, text="Tabela de Identificação")
